@@ -3,9 +3,15 @@ body {
     max-width: 200px;
     margin: auto;
 }
-input{
-    border: 2px solid red;
-    line-height: 1;
+
+p {
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+textarea {
+    border: 2px solid coral;
+    line-height: 2;
     font-size: 17px;
     width: 100%;
     display: block;
@@ -17,4 +23,36 @@ input{
     letter-spacing: 0.01em;
     position: relative;
     margin-top: 30px;
+}
+
+select {
+    border: 2px solid coral;
+    line-height: 4;
+    font-size: 17px;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border-radius: 60px;
+    color:black;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    position: relative;
+    margin-top: 30px;
+}
+
+button {
+    background-color: coral;
+    line-height: 4;
+    font-size: 17px;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border-radius: 60px;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }

@@ -4,20 +4,26 @@
     <title>Typistetään tekstiä</title>
     <link rel="stylesheet" href="styles.css"/>
   </head>
-  <body>
-    <h1>Week 6, task 1</h1>
-    <p>Typistettävä teksti:</p>
-    <input type="text"></input>
-    <br>
-    <p>Typistettävä merkkien määrä: </p>
 
+  <body>
     <form id="dropdownform">
+      <h1>Week 6, task 1</h1>
+      <p>Typistettävä teksti:</p>
+      <textarea id="textarea" rows="4" cols="50"></textarea>
+      <br>
+      <p>Typistettävä merkkien määrä: </p>
+
       <select name="numberdropdown" id="amount">
         <option value="2">2</option>
         <option value="4">4</option>
         <option value="6">6</option>
         <option value="8">8</option>
       </select>
+      <br>
+      <button id="dropdownbutton" type="button">Typistä</button>
+      <br>
+      <br>
+      <p id="text"></p>
     </form>
 
     <script src="scripts.js" type="text/javascript"></script>

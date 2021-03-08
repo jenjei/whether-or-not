@@ -4,7 +4,7 @@ import Router from 'koa-router';
 import mysql from 'mysql2/promise';
 
 // The port that this server will run on, defaults to 9000
-const port = process.env.PORT || 9000;
+const port = process.env.PORT || 8000;
 
 // Instantiate a Koa server
 const app = new Koa();

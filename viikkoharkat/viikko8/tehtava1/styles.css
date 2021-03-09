@@ -1,0 +1,19 @@
+h1 {
+    padding-left: 40%;
+}
+table {
+    padding-left: 5%;
+}
+th,td {
+    padding: 3.0em;
+}
+th {
+    font-size: large;
+    border: 2px solid black;
+}
+td {
+    border: 1px solid black;
+}
+body {
+    background-color: blanchedalmond;
+}

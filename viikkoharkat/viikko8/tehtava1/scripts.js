@@ -30,5 +30,3 @@ for (var r=1; r<rows; r++) {
 
   tableBody.appendChild(row);
 }
-
-

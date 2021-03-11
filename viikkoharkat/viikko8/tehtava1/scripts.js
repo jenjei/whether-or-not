@@ -1,27 +1,34 @@
-tablebody.textcontent = "";
 
-const numberDataArray = [
-  1,
-  2,
-  3,
-  4,
-  5,
-  6,
-  7,
-  8,
-  9,
-  10
-];
+const tableBody = document.getElementById("tablebody");
 
-for (let i = 1; i < 10; i++) {
+var rows = 8;
+
+for (var r=1; r<rows; r++) {
+  console.log("inside foreach", r);
 
   const row = document.createElement("tr");
 
-  for (numberData of numberDataArray) {
-    const cell = document.createElement("th");
-    const cellText = document.createTextNode(numberData + 1);
+  const cellDataArray = [
+    r + 1,
+    r + 2,
+    r + 3,
+    r + 4,
+    r + 5,
+    r + 6,
+    r + 7,
+    r + 8,
+  ];
+  console.log("cellDataArray", cellDataArray);
+
+  for (const cellData of cellDataArray) {
+    const cell = document.createElement("td");
+    const cellText = document.createTextNode(cellData);
+
     cell.appendChild(cellText);
-    cell.appendChild(cell);
+    row.appendChild(cell);
   }
-  tablebody.appendChild(row);
+
+  tableBody.appendChild(row);
 }
+
+

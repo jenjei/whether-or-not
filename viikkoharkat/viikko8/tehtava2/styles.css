@@ -1,6 +1,7 @@
 body {
     max-width: 1000px;
     margin: auto;
+    background-color: lightblue;
 }
 select {
     border: 2px solid white;

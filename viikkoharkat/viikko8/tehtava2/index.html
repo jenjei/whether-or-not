@@ -7,8 +7,6 @@
 
   <body>
     <h1>Pohjoismaiden kuukauden koronahistoria</h1>
-    <br>
-
     <form id="dropdownform">
       <select name="countrydropdown" id="country">
         <option value="fi">Suomi</option>
@@ -18,13 +16,19 @@
         <option value="is">Islanti</option>
       </select>
       <button id="dropdownbutton" type="button">Hae koronadata</button>
-      <p id="text">Nykyinen näytetty data: ei valittua maata</p>
     </form>
 
+    <p id="text">Nykyinen näytetty data: ei valittua maata</p>
+    <b>Yhteensä: Todetut tapaukset: <span id="totalconfirmed">-</span>
+       || Parantuneet: <span id="totalrecovered">-</span>
+       || Kuolleet: <span id="totaldeaths">-</span>
+    </b>
+    <br>
+    <br>
     <table>
         <thead id="tablehead">
             <tr>
-              <th>#</th>
+              <th>#</th> 
               <th>Date</th>
               <th>Confirmed</th>
               <th>Recovered</th>

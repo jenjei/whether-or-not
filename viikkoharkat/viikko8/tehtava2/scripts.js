@@ -5,6 +5,9 @@ const dropdownButton = document.getElementById("dropdownbutton");
 const baseUrl = 'https://corona-api.com/countries/';
 let url = "";
 const textTotal = document.getElementById("text");
+const totalConfirmedSpan = document.getElementById("totalconfirmed");
+const totalRecoveredSpan = document.getElementById("totalrecovered");
+const totalDeathSpan = document.getElementById("totaldeaths");
 
 
 dropdownButton.addEventListener("click", () => {
@@ -75,6 +78,9 @@ const myAsyncFunction = async () => {
 
       tableBody.appendChild(row);
     }
+    totalConfirmedSpan.textContent = datat.data.latest_data.confirmed;
+    totalRecoveredSpan.textContent = datat.data.latest_data.recovered;
+    totalDeathSpan.textContent = datat.data.latest_data.deaths;
   });
 };
 

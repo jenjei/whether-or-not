@@ -1,9 +1,11 @@
 h1 {
-    padding-left: 40%;
+    padding-left: 58%;
     padding-top: 5%;
     color: white;
 }
 table {
+    margin-left: 5%;
+    margin-bottom: 5%;
     background-size: 642px;
     padding-right: 2.0em;
 }

@@ -4,15 +4,13 @@ body {
     background-color: lightblue;
 }
 select {
+    background-color: red;
     border: 2px solid white;
-    line-height: 4;
-    font-size: 17px;
-    display: block;
-    box-sizing: border-box;
+    font-size: 20px;
     padding: 10px 15px;
     border-radius: 60px;
     color:black;
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: 0.01em;
     position: relative;
     margin-top: 30px;
@@ -21,12 +19,12 @@ select {
 button {
     background-color: red;
     line-height: 4;
-    font-size: 17px;
+    font-size: 20px;
     display: block;
     box-sizing: border-box;
     padding: 10px 15px;
     border-radius: 60px;
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: 0.01em;
     position: relative;
     margin-top: 30px;
@@ -44,6 +42,6 @@ table {
 td, th {
     padding: 1.0em;
 }
-p {
+p, b {
     font-size: x-large;
 }

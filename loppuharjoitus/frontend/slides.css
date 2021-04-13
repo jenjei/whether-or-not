@@ -1,5 +1,7 @@
 body {
     background-color: lightblue;
+    margin-left:25%;
+    margin-right: 25%;
 } 
  
  *{
@@ -9,6 +11,7 @@ body {
   /* Position the image container (needed to position the left and right arrows) */
   .container {
     position: relative;
+    max-width: 400;
   }
   
   /* Hide the images by default */

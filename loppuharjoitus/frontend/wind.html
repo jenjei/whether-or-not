@@ -5,7 +5,7 @@
 -->
 <html>
   <head>
-    <title>Weather app</title>
+    <title>Whether or not</title>
     <meta charset="UTF-8" />
     <!-- link the Bootstrap CSS:-->
     <link
@@ -31,16 +31,7 @@
             <a class="nav-link" href="/temperature.html">Temperature</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/rainfall.html">Rainfall</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/light.html">Light</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="/wind.html">Wind</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/hum-out.html">Humidity outside</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/slides.html">Gallery</a>
@@ -51,15 +42,24 @@
     <!-- Navbar ends -->
 
     <!-- Page content begins -->
-    <br />
-    <div class="mx-auto p-3 mb-2 bg-light text-dark" style="width: 700px">
-      <br />
-      <br />
-      <p>Navigoi yläpalkin kautta haluamallesi sivulle.</p>
+    <div class="container-sm" style="position: relative; max-width: 800px">
+      <h1>Wind</h1>
+      <p></p>
+      <table class="table table-striped table-bordered border-light">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Wind speed (m/s)</th>
+          </tr>
+        </thead>
+        <tbody id="tablebody"></tbody>
+      </table>
     </div>
     <!-- Page content ends -->
 
     <!-- Link scripts-->
-    <script src="script.js"></script>
+    <script src="wind.js"></script>
   </body>
 </html>

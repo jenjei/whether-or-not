@@ -4,7 +4,7 @@ const myAsyncFunction = async () => {
   console.log("Entering async function");
 
   const response = await fetch(
-    "http://webapi19sa-1.course.tamk.cloud/v1/weather/limit/50"
+    "http://webapi19sa-1.course.tamk.cloud/v1/weather/Windspeed"
   );
   console.log("Response:", response);
 
@@ -21,11 +21,10 @@ const myAsyncFunction = async () => {
     const row = document.createElement("tr");
 
     const cellDataArray = [
-      index + 1,
+      index + 1, //#
       new Date(rowData.date_time).toLocaleDateString(), // date
       new Date(rowData.date_time).toLocaleTimeString(), // time
-      Object.keys(rowData.data), // data
-      rowData.data[Object.keys(rowData.data)], // value
+      rowData.Windspeed, // value
     ];
     console.log("cellDataArray", cellDataArray);
 
@@ -40,5 +39,5 @@ const myAsyncFunction = async () => {
 
     tableBody.appendChild(row);
   });
-};
+}
 myAsyncFunction();

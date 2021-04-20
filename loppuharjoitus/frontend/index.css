@@ -16,8 +16,6 @@ h1 {
 
 body {
   background-color: lightblue;
-  margin-left: 10%;
-  margin-right: 25%;
 }
 
 @-webkit-keyframes blink {
@@ -65,4 +63,3 @@ body {
     color: #fff6a9;
   }
 }
-

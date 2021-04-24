@@ -1,8 +1,8 @@
 body {
-    background-color: lightblue;
+  background-color: lightblue;
 }
 .navbar-nav {
-    position: absolute;
-    left: 50%;
-    transform: translatex(-50%);
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
 }

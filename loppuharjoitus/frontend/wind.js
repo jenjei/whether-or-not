@@ -39,5 +39,5 @@ const myAsyncFunction = async () => {
 
     tableBody.appendChild(row);
   });
-}
+};
 myAsyncFunction();

@@ -1,4 +1,50 @@
 const tableBody = document.getElementById("tablebody");
+const canvasElement = document.getElementById("temperatureChart");
+var canvas = document.getElementById("myCanvas");
+
+const myChart = new Chart(canvasElement, {
+  type: "line",
+  data: {
+    datasets: [
+      {
+        label: "Temperature",
+        data: [0, 0],
+        backgroundColor: "orange",
+        borderColor: "black",
+        borderWidth: 2,
+      },
+    ],
+  },
+  options: {
+    legend: {
+      labels: {
+        fontColor: "black",
+      },
+    },
+    scales: {
+      yAxes: [
+        {
+          ticks: {
+            fontColor: "black",
+          },
+        },
+      ],
+      xAxes: [
+        {
+          ticks: {
+            fontColor: "black",
+          },
+          type: "time",
+          time: {
+            tooltipFormat: "d.L.Y HH:MM:SS",
+          },
+        },
+      ],
+    },
+  },
+});
+
+let datapoints = [];
 
 const myAsyncFunction = async () => {
   console.log("Entering async function");
@@ -39,5 +85,9 @@ const myAsyncFunction = async () => {
 
     tableBody.appendChild(row);
   });
+  myChart.data.labels = data.map((values) => values.date_time);
+  myChart.data.datasets[0].data = data.map((values) => values.temperature);
+  myChart.data.datasets[0].label = "Temperature";
+  myChart.update();
 };
 myAsyncFunction();

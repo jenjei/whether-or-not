@@ -71,4 +71,8 @@ body {
   position: absolute;
   left: 50%;
   transform: translatex(-50%);
+  font-size: x-large;
+}
+.navbar-brand {
+  font-size: x-large;
 }

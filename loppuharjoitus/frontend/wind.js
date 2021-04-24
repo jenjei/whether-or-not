@@ -1,6 +1,9 @@
 const tableBody = document.getElementById("tablebody");
 const canvasElement = document.getElementById("temperatureChart");
 var canvas = document.getElementById("myCanvas");
+let url = "";
+const timedropdown = document.getElementById("timedropdown");
+const dropdownbutton = document.getElementById("choosebutton");
 
 const myChart = new Chart(canvasElement, {
   type: "line",
@@ -49,11 +52,11 @@ let datapoints = [];
 const myAsyncFunction = async () => {
   console.log("Entering async function");
 
-  const response = await fetch(
-    "http://webapi19sa-1.course.tamk.cloud/v1/weather/Windspeed"
-  );
+  // fetch data:
+  const choosedTime = timedropdown.value;
+  url = "http://webapi19sa-1.course.tamk.cloud/v1/weather/Windspeed/" + choosedTime;
+  const response = await fetch(url);
   console.log("Response:", response);
-
   const data = await response.json();
   console.log("Data:", data);
 
@@ -91,3 +94,8 @@ const myAsyncFunction = async () => {
   myChart.update();
 };
 myAsyncFunction();
+
+dropdownbutton.addEventListener("click", () => {
+  console.log("click");
+  myAsyncFunction();
+});

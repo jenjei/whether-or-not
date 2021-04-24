@@ -5,4 +5,35 @@ body {
   position: absolute;
   left: 50%;
   transform: translatex(-50%);
+  font-size: x-large;
+}
+.navbar-brand {
+  font-size: x-large;
+}
+select {
+  background-color: lightblue;
+  border: 2px solid white;
+  font-size: 20px;
+  padding: 10px 15px;
+  border-radius: 60px;
+  color:black;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  position: relative;
+  margin-top: 30px;
+}
+button {
+  background-color: orange;
+  line-height: 2;
+  font-size: 20px;
+  display: block;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  border-radius: 60px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 40%;
 }

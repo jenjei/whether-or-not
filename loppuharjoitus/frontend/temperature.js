@@ -1,6 +1,9 @@
 const tableBody = document.getElementById("tablebody");
 const canvasElement = document.getElementById("temperatureChart");
 var canvas = document.getElementById("myCanvas");
+let url = "";
+const timedropdown = document.getElementById("timedropdown");
+const dropdownbutton = document.getElementById("choosebutton");
 
 const myChart = new Chart(canvasElement, {
   type: "line",
@@ -49,15 +52,16 @@ let datapoints = [];
 const myAsyncFunction = async () => {
   console.log("Entering async function");
 
-  const response = await fetch(
-    "http://webapi19sa-1.course.tamk.cloud/v1/weather/temperature"
-  );
-  console.log("Response:", response);
+  // fetch data:
 
+  const choosedTime = timedropdown.value;
+  url = "http://webapi19sa-1.course.tamk.cloud/v1/weather/temperature/" + choosedTime;
+  const response = await fetch(url);
+  console.log("Response:", response);
   const data = await response.json();
   console.log("Data:", data);
 
-  // Generate html rows for table
+  // Generate html rows for table:
 
   tableBody.textContent = "";
 
@@ -85,9 +89,15 @@ const myAsyncFunction = async () => {
 
     tableBody.appendChild(row);
   });
+  // updating chart:
   myChart.data.labels = data.map((values) => values.date_time);
   myChart.data.datasets[0].data = data.map((values) => values.temperature);
   myChart.data.datasets[0].label = "Temperature, C°";
   myChart.update();
 };
 myAsyncFunction();
+
+dropdownbutton.addEventListener("click", () => {
+  console.log("click");
+  myAsyncFunction();
+});

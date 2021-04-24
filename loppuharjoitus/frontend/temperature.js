@@ -87,7 +87,7 @@ const myAsyncFunction = async () => {
   });
   myChart.data.labels = data.map((values) => values.date_time);
   myChart.data.datasets[0].data = data.map((values) => values.temperature);
-  myChart.data.datasets[0].label = "Temperature";
+  myChart.data.datasets[0].label = "Temperature, C°";
   myChart.update();
 };
 myAsyncFunction();

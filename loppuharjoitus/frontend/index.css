@@ -76,3 +76,6 @@ body {
 .navbar-brand {
   font-size: x-large;
 }
+.center {
+  text-align: center;
+}

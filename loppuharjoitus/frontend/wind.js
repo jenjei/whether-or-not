@@ -54,7 +54,7 @@ const myAsyncFunction = async () => {
 
   // fetch data:
   const choosedTime = timedropdown.value;
-  url = "http://webapi19sa-1.course.tamk.cloud/v1/weather/Windspeed/" + choosedTime;
+  url = "http://webapi19sa-1.course.tamk.cloud/v1/weather/wind_speed/" + choosedTime;
   const response = await fetch(url);
   console.log("Response:", response);
   const data = await response.json();
@@ -73,7 +73,7 @@ const myAsyncFunction = async () => {
       index + 1, //#
       new Date(rowData.date_time).toLocaleDateString(), // date
       new Date(rowData.date_time).toLocaleTimeString(), // time
-      rowData.Windspeed, // value
+      rowData.wind_speed, // value
     ];
     console.log("cellDataArray", cellDataArray);
 
@@ -89,7 +89,7 @@ const myAsyncFunction = async () => {
     tableBody.appendChild(row);
   });
   myChart.data.labels = data.map((values) => values.date_time);
-  myChart.data.datasets[0].data = data.map((values) => values.Windspeed);
+  myChart.data.datasets[0].data = data.map((values) => values.wind_speed);
   myChart.data.datasets[0].label = "Wind, m/s";
   myChart.update();
 };

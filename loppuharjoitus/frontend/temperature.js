@@ -5,6 +5,8 @@ let url = "";
 const timedropdown = document.getElementById("timedropdown");
 const dropdownbutton = document.getElementById("choosebutton");
 
+// Generating chart
+
 const myChart = new Chart(canvasElement, {
   type: "line",
   data: {
@@ -52,7 +54,7 @@ let datapoints = [];
 const myAsyncFunction = async () => {
   console.log("Entering async function");
 
-  // fetch data:
+  // fetch data from api:
 
   const choosedTime = timedropdown.value;
   url = "http://webapi19sa-1.course.tamk.cloud/v1/weather/temperature/" + choosedTime;
@@ -97,6 +99,7 @@ const myAsyncFunction = async () => {
 };
 myAsyncFunction();
 
+// When dropdown-button is clicked:
 dropdownbutton.addEventListener("click", () => {
   console.log("click");
   myAsyncFunction();
